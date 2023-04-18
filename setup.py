@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+import setuptools
 
 VERSION = "0.0.1"
 
@@ -13,7 +13,7 @@ def description():
         return fh.read()
 
 
-setup(
+setuptools.setup(
     name="cat-pass",
     description="The console utility for generate strong passwords",
     long_description=description(),
@@ -29,4 +29,5 @@ setup(
             "cat-pass = cat_password.gen:main",
         ]
     },
+    install_requires=["pyperclip>=1.8.2"],
 )
